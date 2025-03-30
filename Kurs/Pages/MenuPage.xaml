@@ -1,0 +1,67 @@
+﻿<Page x:Class="Kurs.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kurs.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="ЛР №1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Text="ЛР №2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Text="ЛР №3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Text="ЛР №4" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+        <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center"
+                Margin="10"  Width="300" Click="Button_Click_Lab1" >         
+            <TextBlock Text="Вычисление суммы, произведения и количества элементов" 
+               TextWrapping="Wrap" 
+               TextAlignment="Center" Padding="10"/>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center"
+                Margin="10"  Width="300" Click="Button_Click_Lab2" >
+            <TextBlock Text="Поиск в двумерном массиве" 
+                TextWrapping="Wrap" 
+                TextAlignment="Center" Padding="10"/>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center"
+                Margin="10"  Width="300" Click="Button_Click_Lab3" >
+            <TextBlock Text="Изменение двумерного массива" 
+                TextWrapping="Wrap" 
+                TextAlignment="Center" Padding="10"/>    
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" 
+                Margin="10"  Width="300" Click="Button_Click_Lab4" >
+            <TextBlock Text="Формирование двумерного массива" 
+                TextWrapping="Wrap" 
+                TextAlignment="Center" Padding="10"/>
+        </Button>
+        
+        <Button  Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center"
+Width="Auto" Height="Auto" Click="Button_Click_GoBack" >
+            <TextBlock Text="Назад" Padding="10"
+    TextAlignment="Center" />
+        </Button>
+
+    </Grid>
+</Page>
