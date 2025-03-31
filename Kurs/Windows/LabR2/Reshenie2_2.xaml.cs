@@ -27,14 +27,11 @@ namespace Kurs.Windows.LabR2
         public Reshenie2_2()
         {
             InitializeComponent();
-            string filePath = @"C: \Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab2_2.txt";
+            string filePath = @"\Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab2_2.txt";
             DisplayTextFromFile(filePath);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void DisplayTextFromFile(string filePath)
         {

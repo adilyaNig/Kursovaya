@@ -27,14 +27,10 @@ namespace Kurs.Windows.LabR3
         public Code3_1()
         {
             InitializeComponent();
-            string filePath = @"C: \Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab3_1.txt";
+            string filePath = @"\Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab3_1.txt";
             DisplayTextFromFile(filePath);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
         private void DisplayTextFromFile(string filePath)
         {
@@ -43,7 +39,7 @@ namespace Kurs.Windows.LabR3
                 try
                 {
                     string text = File.ReadAllText(filePath, Encoding.UTF8); // Чтение файла в UTF-8
-                    string startWord = "Программный код:"; // Начало вывода
+                    string startWord = "кода:"; // Начало вывода
                     string endWord = "Выполнение"; // Конец вывода
                     Regex regex = new Regex($@"{Regex.Escape(startWord)}(.*?)(?=({Regex.Escape(endWord)})|$)", RegexOptions.Singleline);
                     Match match = regex.Match(text);

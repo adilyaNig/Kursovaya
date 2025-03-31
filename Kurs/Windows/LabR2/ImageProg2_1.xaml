@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs.Windows.LabR2"
         mc:Ignorable="d"
-        Title="ImageProg2_1" Height="450" Width="800">
+        Title="ImageProg2_1" Height="450" Width="800" MinHeight="450" MinWidth="800" MaxHeight="1080" MaxWidth="1920">
     <Grid>
-        <Image Source="/Kurs;component/Images/Image4.png" Stretch="Uniform"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Для изображения -->
+            <RowDefinition Height="Auto"/>
+            <!-- Для текста -->
+        </Grid.RowDefinitions>
+
+        <Image Source="/Kurs;component/Images/Image4.png" 
+           Stretch="Uniform" Margin="50 0"
+           VerticalAlignment="Stretch" 
+           HorizontalAlignment="Stretch" 
+           Grid.Row="0"/>
+
+        <TextBlock Text="Рис.4. Поиск минимального элемента в столбце с номером k." 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               TextWrapping="Wrap"
+               Grid.Row="1" Width="Auto"
+               Margin="20 0 20 20"/>
     </Grid>
 </Window>

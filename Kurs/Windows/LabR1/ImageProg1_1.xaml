@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs.Windows.LabR1"
         mc:Ignorable="d"
-        Title="ImageProg1_1" Height="450" Width="800">
+        Title="ImageProg1_1" Width="800" Height="450" MinHeight="450" MinWidth="800" MaxHeight="1080" MaxWidth="1920">
+
     <Grid>
-        <Image Source="/Kurs;component/Images/Image1.png" Stretch="Uniform"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Для изображения -->
+            <RowDefinition Height="Auto"/>
+            <!-- Для текста -->
+        </Grid.RowDefinitions>
+
+        <Image Source="/Kurs;component/Images/Image1.png" 
+               Stretch="Uniform" 
+               VerticalAlignment="Stretch" 
+               HorizontalAlignment="Stretch" 
+               Grid.Row="0" />
+
+        <TextBlock Text="Рис.1. Вычисление количества и произведения четных элементов в третьей строке массива."
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   TextWrapping="Wrap"
+                   Grid.Row="1" Width="Auto"
+                   Margin="20 0 20 20"/>
     </Grid>
+
 </Window>

@@ -29,6 +29,10 @@ namespace Kurs.Pages
             NavigationService.Navigate(new Lab1_1());
         }
 
+        private void Button_Click_Spravka(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Spravka());
+        }
         private void Button_Click_Lab2(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Lab2_1());
@@ -46,7 +50,7 @@ namespace Kurs.Pages
 
         private void Button_Click_GoBack(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new GlavMenuPage());
         }
     }
 }

@@ -10,28 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using System.IO;
-using Kurs.Windows;
-using System.Windows.Navigation;
 using System.Text.RegularExpressions;
 
-namespace Kurs.Windows.LabR4
+namespace Kurs.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Reshenie4_1.xaml
+    /// Логика взаимодействия для Spravka.xaml
     /// </summary>
-    public partial class Reshenie4_1 : Window
+    public partial class Spravka : Page
     {
-        public Reshenie4_1()
+        public Spravka()
         {
             InitializeComponent();
-            string filePath = @"\Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab4_1.txt";
+            string filePath = @"\Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileSpravka.txt";
             DisplayTextFromFile(filePath);
         }
 
-       
+
         private void DisplayTextFromFile(string filePath)
         {
             if (!String.IsNullOrEmpty(filePath))
@@ -39,8 +38,8 @@ namespace Kurs.Windows.LabR4
                 try
                 {
                     string text = File.ReadAllText(filePath, Encoding.UTF8); // Чтение файла в UTF-8
-                    string startWord = "Решение:"; // Начало вывода
-                    string endWord = "Программный код"; // Конец вывода
+                    string startWord = "-"; // Начало вывода
+                    string endWord = "--"; // Конец вывода
                     Regex regex = new Regex($@"{Regex.Escape(startWord)}(.*?)(?=({Regex.Escape(endWord)})|$)", RegexOptions.Singleline);
                     Match match = regex.Match(text);
                     if (match.Success)
@@ -56,9 +55,10 @@ namespace Kurs.Windows.LabR4
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка при чтении файла: " + ex.Message);
+                    MessageBox.Show($"Ошибка при чтении файла: {ex.Message}");
                 }
             }
         }
     }
+    
 }

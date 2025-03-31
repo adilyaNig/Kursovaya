@@ -27,14 +27,11 @@ namespace Kurs.Windows.LabR4
         public Zadaniya4_2()
         {
             InitializeComponent();
-            string filePath = @"C: \Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab4_2.txt";
+            string filePath = @"\Users\DAMIR\931\Kurs\Kurs\TextFiles\TextFileLab4_2.txt";
             DisplayTextFromFile(filePath);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void DisplayTextFromFile(string filePath)
         {
@@ -43,8 +40,8 @@ namespace Kurs.Windows.LabR4
                 try
                 {
                     string text = File.ReadAllText(filePath, Encoding.UTF8); // Чтение файла в UTF-8
-                    string startWord = "Решение:"; // Начало вывода
-                    string endWord = "Программный код"; // Конец вывода
+                    string startWord = "решения"; // Начало вывода
+                    string endWord = "ГЛАВА 2."; // Конец вывода
                     Regex regex = new Regex($@"{Regex.Escape(startWord)}(.*?)(?=({Regex.Escape(endWord)})|$)", RegexOptions.Singleline);
                     Match match = regex.Match(text);
                     if (match.Success)

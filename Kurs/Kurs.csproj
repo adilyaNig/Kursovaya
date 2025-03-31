@@ -73,6 +73,9 @@
     <Compile Include="Pages\Lab4_2.xaml.cs">
       <DependentUpon>Lab4_2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Spravka.xaml.cs">
+      <DependentUpon>Spravka.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\LabR1\Code1_1.xaml.cs">
       <DependentUpon>Code1_1.xaml</DependentUpon>
     </Compile>
@@ -206,6 +209,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Spravka.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -397,6 +404,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TextFiles\TextFileLab4_1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TextFiles\TextFileSpravka.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

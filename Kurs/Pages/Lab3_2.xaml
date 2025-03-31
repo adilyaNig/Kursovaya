@@ -25,45 +25,66 @@
 
 
 
-        <TextBlock  Margin="80 0" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" Text="Лабораторная работа 3.Изменение двумерного массива" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
-        <TextBox Margin="50 0 " Padding="20" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" TextWrapping="WrapWithOverflow" Text="Задача №2. Дан двумерный массив n*m. Поменять местами максимальный и минимальный элементы в массиве." Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Left"/>
+        <TextBlock  Margin="80 0" Grid.Row="0" 
+               Grid.ColumnSpan="3" 
+               Grid.Column="0" 
+               Text="Лабораторная работа №3. Изменение двумерного массива" 
+               FontSize="25" FontWeight="Bold" 
+               VerticalAlignment="Center" HorizontalAlignment="Center" 
+               TextWrapping="Wrap" TextAlignment="Center"/>
+        <TextBox Margin="100 20 100 -20" Padding="20" Grid.Row="1" 
+            Grid.ColumnSpan="3" IsReadOnly="True"
+            Grid.Column="0" TextWrapping="Wrap" Text="Задача №2.    Дан двумерный массив n*m. Поменять местами максимальный и минимальный элементы в массиве." 
+            FontSize="20" Width="Auto" Height="Auto" 
+            VerticalAlignment="Center" HorizontalAlignment="Center" 
+            TextAlignment="Left"/>
 
-        <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"
+        <Button Grid.Column="0" Grid.Row="2" 
+           VerticalAlignment="Bottom" HorizontalAlignment="Center"
            Width="150" Height="Auto" Click="Button_Click_Reshenie" >
             <TextBlock Text="Решение" Padding="10"
-            TextWrapping="Wrap" 
-            TextAlignment="Center" />
+       TextWrapping="Wrap" 
+       TextAlignment="Center" />
         </Button>
 
-        <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"
-            Width="Auto" Height="Auto" Click="Button_Click_Code" >
+        <Button Grid.Column="1" Grid.Row="2" 
+           VerticalAlignment="Bottom" HorizontalAlignment="Center"
+       Width="Auto" Height="Auto" Click="Button_Click_Code" >
             <TextBlock Text="Программный код" Padding="10"
-                TextWrapping="Wrap" 
-                TextAlignment="Center" />
+           TextWrapping="Wrap" 
+           TextAlignment="Center" />
         </Button>
 
-        <Button Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"
-        Width="Auto" Height="Auto" Click="Button_Click_Prog" >
+        <Button Grid.Column="3" Grid.Row="2" VerticalAlignment="Bottom" 
+           HorizontalAlignment="Center"
+   Width="Auto" Height="Auto" Click="Button_Click_Prog" >
             <TextBlock Text="Как работает программа" Padding="10"
-            TextWrapping="Wrap" 
-            TextAlignment="Center" />
+       TextWrapping="Wrap" 
+       TextAlignment="Center" />
         </Button>
 
-        <Button Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"
-            Width="Auto" Height="Auto" Click="Button_Click_Zadaniya" >
+        <Button Grid.Column="1" Grid.Row="3" 
+       VerticalAlignment="Center" HorizontalAlignment="Center"
+   Width="Auto" Height="Auto" Click="Button_Click_Zadaniya" >
             <TextBlock Text="Задачи для самостоятельной работы" Padding="10"
-                TextWrapping="Wrap" 
-                TextAlignment="Center" />
+       TextWrapping="Wrap" 
+       TextAlignment="Center" />
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"
-        Width="Auto" Height="Auto" Click="Button_Click_GoBack" >
-            <TextBlock Text="Назад" Padding="10"
-            TextAlignment="Center" />
+        <Button Style="{StaticResource MenuButtonStyle}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" 
+           HorizontalAlignment="Center" 
+   Width="Auto" Height="Auto" Click="Button_Click_GoBack" >
+            <TextBlock Text="Назад" Padding="10" 
+       TextAlignment="Center" />
+
         </Button>
 
-        
-
+        <Button Style="{StaticResource ButtonStyle}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" 
+        HorizontalAlignment="Center"
+Width="Auto" Height="Auto" Click="Button_Click_MenuPage" >
+            <TextBlock Text="В главное меню" Padding="10"
+    TextAlignment="Center" />
+        </Button>
 
 
 

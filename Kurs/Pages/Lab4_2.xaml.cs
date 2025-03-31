@@ -28,7 +28,7 @@ namespace Kurs.Pages
         }
         private void Button_Click_GoBack(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new Lab4_1());
         }
         private void Button_Click_Prog(object sender, RoutedEventArgs e)
         {
@@ -50,6 +50,11 @@ namespace Kurs.Pages
         {
             Zadaniya4_2 zadaniya4_2 = new Zadaniya4_2();
             zadaniya4_2.ShowDialog();
+        }
+
+        private void Button_Click_MenuPage(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MenuPage());
         }
     }
 }

@@ -26,9 +26,9 @@ namespace Kurs.Pages
         {
             InitializeComponent();
         }
-        private void Button_Click_GoBack(object sender, RoutedEventArgs e)
+        private void Button_Click_MenuPage(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new MenuPage());
         }
         private void Button_Click_Prog(object sender, RoutedEventArgs e)
         {
