@@ -16,22 +16,21 @@ using System.Windows.Shapes;
 namespace Kurs.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Spravka.xaml
+    /// Логика взаимодействия для Lab2Page.xaml
     /// </summary>
-    public partial class Spravka : Page
+    public partial class Lab2Page : Page
     {
-        public Spravka()
+        public Lab2Page()
         {
             InitializeComponent();
-            
         }
         public void LoadHtmlFile()
         {
             try
             {
                 // Получаем путь к HTML-файлу относительно папки bin\Debug
-                string htmlFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web\\Spravka.htm");
-                webBrowserSpravka.Navigate(htmlFilePath);
+                string htmlFilePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Web\\Lab2.htm");
+                webBrowser2.Navigate(htmlFilePath);
             }
             catch (Exception ex)
             {
@@ -39,5 +38,4 @@ namespace Kurs.Pages
             }
         }
     }
-    
 }

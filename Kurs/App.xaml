@@ -5,12 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
-        <Style TargetType="RichTextBox">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="Padding" Value="30"/>
-            <Setter Property="IsReadOnly" Value="True"/>
-        </Style>
-
+        
 
         <Style TargetType="Button">
 
@@ -48,36 +43,7 @@
             
         </Style>
 
-        <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="IsReadOnly" Value="True"/>
-        </Style>
-
-        <Style x:Key="MenuButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#FFDA344B"/>
-            <Setter Property="FontFamily" Value="Verdana"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" 
-                                          VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <!-- Триггер для изменения цвета при наведении курсора -->
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="DarkRed"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
+        
 
 
         <Style x:Key="ButtonStyle" TargetType="Button">

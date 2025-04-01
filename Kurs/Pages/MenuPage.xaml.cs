@@ -1,5 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Kurs.Pages;
+
 namespace Kurs.Pages
 {
     /// <summary>
@@ -24,33 +28,48 @@ namespace Kurs.Pages
         {
             InitializeComponent();
         }
+
         private void Button_Click_Lab1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Lab1_1());
+            // Создаем экземпляр страницы с Lab1Page
+            Lab1Page lab1Page = new Lab1Page();
+
+            // Загружаем HTML-файл
+            lab1Page.LoadHtmlFile();
+
+            // Открываем новую страницу
+            NavigationService.Navigate(lab1Page);
         }
+
+        private void Button_Click_Lab2(object sender, RoutedEventArgs e)
+        {
+            Lab2Page lab2Page = new Lab2Page();
+            lab2Page.LoadHtmlFile();
+            NavigationService.Navigate(lab2Page);
+        }
+        private void Button_Click_Lab3(object sender, RoutedEventArgs e)
+        {
+            Lab3Page lab3Page = new Lab3Page();
+            lab3Page.LoadHtmlFile();
+            NavigationService.Navigate(lab3Page);
+        }
+        private void Button_Click_Lab4(object sender, RoutedEventArgs e)
+        {
+            Lab4Page lab4Page = new Lab4Page();
+            lab4Page.LoadHtmlFile();
+            NavigationService.Navigate(lab4Page);
+        }
+
 
         private void Button_Click_Spravka(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Spravka());
+            Spravka spravka = new Spravka();
+            spravka.LoadHtmlFile();
+            NavigationService.Navigate(spravka);
         }
-        private void Button_Click_Lab2(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Lab2_1());
-        }
+       
 
-        private void Button_Click_Lab3(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Lab3_1());
-        }
-
-        private void Button_Click_Lab4(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Lab4_1());
-        }
-
-        private void Button_Click_GoBack(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new GlavMenuPage());
-        }
+        
+     
     }
 }
